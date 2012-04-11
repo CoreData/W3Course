@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<title>Geo Example</title>
+	</head>
+	<body>
+		<h1>Geo Example</h1>
+		<dl>
+			<dt>Status</dt>
+			<dd id='status'>nothing has happened yet</dd>
+			<dt>Latitude</dt>
+			<dd id='latitude'>X</dd>
+			<dt>Longitude</dt>
+			<dd id='longitude'>X</dd>
+			<dt>Altitude</dt>
+			<dd id='altitude'>X</dd>
+			<dt>Heading</dt>
+			<dd id='heading'>X</dd>
+			<dt>Speed</dt>
+			<dd id='speed'>X</dd>
+		</dl>
+		<script src='../libs/jquery.min.js'></script>
+		<script>
+		if(navigator.geolocation) {
+			navigator.geolocation.watchPosition(
+				function (pos) {
+					$("#status").text("OK");
+					$("#latitude").text(pos.coords.latitude);
+					$("#longitude").text(pos.coords.longitude);
+					$("#altitude").text(pos.coords.altitude);
+					$("#heading").text(pos.coords.heading);
+					$("#speed").text(pos.coords.speed);
+				},
+				function (err) {
+					$('#status').text("Error: " + err.message);
+				}
+			)
+		}
+		else {
+			$('#status').text("Geolocation is not available here.")
+		}
+		</script>
+	</body>
+</html>

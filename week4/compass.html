@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<title>Compass</title>
+	</head>
+	<body>
+		<div id="status"></div>
+		<div id="compass_box">
+			<svg xmlns="http://www.w3.org/2000/svg" width='200' height='200' viewBox='0 0 200 200'>
+				<circle cx='100' cy='100' r='95' fill='#fff' stroke='blue' id='circle'></circle>
+				<line x1="100" y1="5" x2="100" y2="195" style="stroke:rgb(255,0,0);stroke-width:1"></line>
+				<line x1="5" y1="100" x2="195" y2="100" style="stroke:rgb(255,0,0);stroke-width:1"></line>
+				<polygon points=" 100,180 90,100 100,20 110,100" fill="blue" stroke="black" id="needle"></polygon>
+				<circle cx='100' cy='100' r='5' fill='#000' stroke='white' id='circle'></circle>
+			</svg>
+		</div>
+		<script>
+		window.addEventListener("deviceorientation", function compass(ev) {
+			if(event.alpha == null && event.alpha == undefined && !('ondeviceorientation' in window)) {
+				document.getElementById("compass_box").style.display= "none";
+				document.getElementById('status').innerHTML= "Sorry, this functionality isn't supported by your device.";
+				window.removeEventListener("deviceorientation", compass);
+						}
+			else {
+				var direction, heading, diff;
+				var rotation = 0;
+				var corr = 0;
+				
+				direction = 360 - ev.alpha;
+			
+				diff = Math.round(direction) - corr;
+				corr = Math.round(direction);
+
+	            if (diff > 180)
+	                diff -= 360;
+
+	            if (diff < -180)
+	                diff += 360;
+								
+				rotation += diff;
+			
+				heading = direction;
+	            while (heading >= 360) {
+	                heading -= 360;
+	            }
+	            while (heading < 0) {
+	                heading += 360;
+	            }
+				document.getElementById("status").innerHTML = (Math.round(heading)).toString();
+			
+				var rotate = "rotate(" + (-rotation) + " 100 100)";
+				needle = document.getElementById('needle');
+				needle.setAttribute("transform", rotate);
+			}
+		}, false);
+		</script>
+	</body>
+</html>

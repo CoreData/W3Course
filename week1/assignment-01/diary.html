@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <title>My Diary</title>
+    <link href='http://fonts.googleapis.com/css?family=Over+the+Rainbow|Lobster|Bangers|Julee' rel='stylesheet' type='text/css'/>
+    <link rel='stylesheet' href='960.css' type='text/css' media='all' charset='utf-8'/>
+    <link rel='stylesheet' href='diary.css' type='text/css' media='all' charset='utf-8'/>
+  </head>
+  <body>
+    <div id='page'>
+      <header>
+        <h1>My Diary</h1>
+        <h2>all the me that's worth writing down!!!</h2>
+      </header>
+      <div id='content' class='container_12'>
+        <div class='grid_12' id='add-text'>
+          <div class='label'>Subject</div>
+          <div class='field'><input type='text' name='subject'/></div>
+          <div class='label'>Body</div>
+          <div class='field'><textarea></textarea></div>
+          <div class='actions'>
+            <button onclick='okEdit()'>Ok!!!</button>
+            <button onclick='cancelEdit()'>Cancel!!!</button>
+          </div>
+        </div>
+        <div class='clear'></div>
+        <div class='grid_3'>
+          <nav>
+            <ul>
+              <li><a href='#' onclick='addTxt()'>Add A Text Entry!</a></li>
+            </ul>
+          </nav>
+          <div class='documentation'>
+            Welcome to the wonderful My Diary application!!! We at 
+            <a href='http://robineko.com/' target='_blank' class='us'>Really Sexy Apps For Me</a>
+            hope you really enjoy it!!!<br/><br/>
+            Simply click "<b>Add A Text Entry!</b>" above and you'll be on your way to writing the most awesome
+            diary of your entire life!!!
+          </div>
+        </div>
+        <div class='grid_9' id='posts'>
+          XXX
+        </div>
+        <div class='clear'></div>
+      </div>
+      <footer>
+        © 2011 <a href='http://robineko.com/' target='_blank' class='us'>Really Sexy Apps For Me</a>. All Rights Reserved.
+      </footer>
+    </div>
+  </body>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+  <script src='diary.js'></script>
+</html>
+

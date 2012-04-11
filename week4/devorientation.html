@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width' />
+		<title>SVG and Device orientation</title>
+	</head>
+	<body>
+		<h1>SVG and Device Orientation</h1>
+		<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'>
+			<rect x='100' y='75' width='100' height='50' fill='#f90' stroke='#000' id='do'></rect>
+		</svg>
+		<script>
+		window.addEventListener("deviceorientation", function(ev) {
+			var rotate = "rotate(" + (event.gamma * -1 ) + " 150 100)"
+			, scale = ( event.beta / 10 ) * 2 + 1
+			, rect = document.getElementById("do");
+			rect.setAttribute("transform", rotate);
+			rect.setAttribute("stroke-width", scale);
+		}, false);
+		</script>
+	</body>
+</html>

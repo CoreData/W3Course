@@ -1,0 +1,35 @@
+body {
+	padding: 0;
+	margin: 40px;
+	background-color: #808080;
+	color: #000;
+}
+
+#header {
+	background-color: #a9a9a9;
+	border-radius: 3em;
+	padding: 1em;
+	margin: 0;
+	font-size: 0.75em;
+}
+
+article {
+	width: 500px;
+	background-color: #d3d3d3;
+	padding: 1.5em;
+	margin: 1.5em;
+	border-radius: 3em;
+	font-size: 0.75em;
+	overflow: hidden;
+}
+
+p {
+	-webkit-transition: color 0.4s, background-color 0.4s left 2.4s;
+}
+
+.change {
+	border-radius: 0.5em;
+	color: orange;
+	background-color: white;
+	-webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);	
+}
