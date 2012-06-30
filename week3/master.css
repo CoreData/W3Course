@@ -5,7 +5,7 @@ body {
 }
 
 #header, article {
-	width: 80%;
+	width: auto;
 	border-radius: 0.5em;
 	padding: 0.75em;
 	margin: 0.5em;
@@ -18,11 +18,15 @@ body {
 
 article {
 	background-color: #d3d3d3;
-	overflow: hidden;
+/*	overflow: hidden;*/
 }
 
 p {
 	-webkit-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-moz-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-ms-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-o-transition: color 0.4s, background-color 0.4s left 2.4s;
+	transition: color 0.4s, background-color 0.4s left 2.4s;
 }
 
 .change {
@@ -30,4 +34,8 @@ p {
 	color: orange;
 	background-color: white;
 	-webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);	
+	-moz-transform: matrix(1, -0.2, 0, 1, 0, 0);
+	-ms-transform: matrix(1, -0.2, 0, 1, 0, 0);	
+	-o-transform: matrix(1, -0.2, 0, 1, 0, 0);
+	transform: matrix(1, -0.2, 0, 1, 0, 0);
 }
