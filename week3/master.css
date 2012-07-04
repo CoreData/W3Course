@@ -4,21 +4,28 @@ body {
 	color: #000;
 }
 
-#header, article {
+#header, article, form, button {
 	width: auto;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
 	border-radius: 0.5em;
-	padding: 0.75em;
 	margin: 0.5em;
 	font-size: 0.75em;
+	padding: 0.75em;
 }
 
 #header {
 	background-color: #a9a9a9;
 }
 
-article {
+article, form {
 	background-color: #d3d3d3;
-/*	overflow: hidden;*/
+}
+
+button {
+	background-color: #996;
 }
 
 p {
@@ -38,4 +45,18 @@ p {
 	-ms-transform: matrix(1, -0.2, 0, 1, 0, 0);	
 	-o-transform: matrix(1, -0.2, 0, 1, 0, 0);
 	transform: matrix(1, -0.2, 0, 1, 0, 0);
+}
+
+li {
+	margin-left: -3.25em;
+	list-style-type: none;
+}
+
+input, textarea {
+	width: 90%;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	border-radius: 0.5em;
 }

@@ -13,6 +13,18 @@
 	  <div id="header">
 		  <h1>My Diary Entries</h1>
 	  </div>
+	<section class='entry_form'>
+		<form id="entry_point" action="assignment3_submit" method="get" accept-charset="utf-8">
+			<h2>Submit a new entry here</h2>
+			<ul>
+				<li><label for="entry_headline">Headline</label></li>
+				<li><input id="entry_headline" name="entry_headline" type="text" placeholder="Your entry headline goes here..." required autofocus /></li>
+				<li><label for="entry_body">Body</label></li>
+				<li><textarea id="entry_body" name="entry_body" rows="5" placeholder="Your entry text goes here..." required></textarea></li>
+				<li><button type="submit">Submit your entry</button></li>
+			</ul></p>
+		</form>
+	</section>
     <section class='entries'>
       <article>
         <h2>Wrote my first mobile application</h2>
