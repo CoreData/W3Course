@@ -17,11 +17,11 @@
 		</div>
 		<script>
 		window.addEventListener("deviceorientation", function compass(ev) {
-			if(event.alpha == null && event.alpha == undefined && !('ondeviceorientation' in window)) {
+			if(event.alpha == null || event.alpha == undefined ||  !('ondeviceorientation' in window)) {
 				document.getElementById("compass_box").style.display= "none";
 				document.getElementById('status').innerHTML= "Sorry, this functionality isn't supported by your device.";
 				window.removeEventListener("deviceorientation", compass);
-						}
+			}
 			else {
 				var direction, heading, diff;
 				var rotation = 0;
