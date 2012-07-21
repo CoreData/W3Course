@@ -9,9 +9,14 @@ $(document).ready(function() {
 					"\<h2\>" + headline + 
 					"\<\/h2\>" + 
 					"\<p\>" + body + "\<\/p\>" + 
+					"\<a href=\"\#\" class=\"deleter\"\>Delete this entry\<\/a\>" +
 					"\<\/article\>";
-		
+		alert(entry);
 		$(".entries").prepend(entry);
-		alert("Done");
 	});
+	
+	$('.deleter').click(function() {
+		$(this).parent().remove();
+	});
+	
 });
