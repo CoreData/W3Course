@@ -13,17 +13,17 @@
 	  <div id="header">
 		  <h1>My Diary Entries</h1>
 	  </div>
-	<section class='entry_form'>
-		<form id="entry_point" accept-charset="utf-8">
+	<section class='entry'>
+		<article>
 			<h2>Submit a new entry here</h2>
-			<ul>
+			<ul id="entry_list">
 				<li><label for="entry_headline_label">Headline</label></li>
 				<li><input id="entry_headline" name="entry_headline" type="text" placeholder="Your entry headline goes here..." required autofocus /></li>
 				<li><label for="entry_body_label">Body</label></li>
 				<li><textarea id="entry_body" name="entry_body" rows="5" placeholder="Your entry text goes here..." required></textarea></li>
 				<li><button id="entry_button" type="submit">Submit your entry</button></li>
 			</ul>
-		</form>
+		</article>
 	</section>
     <section class='entries'>
       <article>
@@ -32,14 +32,16 @@
           Today I wrote my first mobile application. It was great! I had huge amounts of fun, it was
           a lot easier than I expected, and I was so happy I spent the rest of the day celebrating.
         </p>
+		<a href="#" class="deleter">Delete this entry</a>
       </article>
-      <!-- <article>
+      <article>
         <h2>Wrote another mobile application</h2>
         <p>
           I am on such a roll with these mobile Web applications that I went crazy and wrote a second
           one. I am so happy I cannot stop singing at the top of my lungs. My cat seems worried that
           I've finally lost it completely, but I don't care — it's mobile Web all the way from now on!
         </p>
+		<a href="#" class="deleter">Delete this entry</a>
       </article>
       <article>
         <h2>Must stop writing mobile applications</h2>
@@ -48,7 +50,8 @@
           stop and take a break, but there are so many great things to do with this technology that I
           really don't know how to stop!
         </p>
-      </article> -->
+		<a href="#" class="deleter">Delete this entry</a>
+      </article>
     </section>
 	<script src='../libs/jquery.min.js'></script>
 	<script src='hideShow.js'></script>
