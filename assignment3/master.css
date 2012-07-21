@@ -4,7 +4,7 @@ body {
 	color: #000;
 }
 
-#header, article, form, button {
+#header, article, button {
 	width: auto;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
@@ -20,7 +20,7 @@ body {
 	background-color: #a9a9a9;
 }
 
-article, form {
+article {
 	background-color: #d3d3d3;
 }
 
@@ -34,6 +34,14 @@ p {
 	-ms-transition: color 0.4s, background-color 0.4s left 2.4s;
 	-o-transition: color 0.4s, background-color 0.4s left 2.4s;
 	transition: color 0.4s, background-color 0.4s left 2.4s;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
 }
 
 .change {
