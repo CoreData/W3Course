@@ -17,10 +17,4 @@ $(document).ready(function() {
 		////
 		alert(entry);
 		$(".entries").prepend(entry);
-	});
-	
-	$('.deleter').click(function() {
-		$(this).parent().remove();
-	});
-	
 });
