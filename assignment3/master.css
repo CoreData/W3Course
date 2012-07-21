@@ -1,0 +1,62 @@
+body {
+	padding: 0;
+	background-color: #808080;
+	color: #000;
+}
+
+#header, article, form, button {
+	width: auto;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	border-radius: 0.5em;
+	margin: 0.5em;
+	font-size: 0.75em;
+	padding: 0.75em;
+}
+
+#header {
+	background-color: #a9a9a9;
+}
+
+article, form {
+	background-color: #d3d3d3;
+}
+
+button {
+	background-color: #996;
+}
+
+p {
+	-webkit-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-moz-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-ms-transition: color 0.4s, background-color 0.4s left 2.4s;
+	-o-transition: color 0.4s, background-color 0.4s left 2.4s;
+	transition: color 0.4s, background-color 0.4s left 2.4s;
+}
+
+.change {
+	border-radius: 0.5em;
+	color: orange;
+	background-color: white;
+	-webkit-transform: matrix(1, -0.2, 0, 1, 0, 0);	
+	-moz-transform: matrix(1, -0.2, 0, 1, 0, 0);
+	-ms-transform: matrix(1, -0.2, 0, 1, 0, 0);	
+	-o-transform: matrix(1, -0.2, 0, 1, 0, 0);
+	transform: matrix(1, -0.2, 0, 1, 0, 0);
+}
+
+li {
+	margin-left: -3.25em;
+	list-style-type: none;
+}
+
+input, textarea {
+	width: 90%;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
