@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function() {
-	$("#entry_button").click(function() {
+	$("#entry_button").bind("click", function handleSubmitButton(event) {
 		var headline = $("#entry_list input[name=entry_headline]").val();
 		var body = $("#entry_list textarea[name=entry_body]").val();
 		
