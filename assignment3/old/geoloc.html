@@ -20,7 +20,7 @@
 			<dt>Speed</dt>
 			<dd id='speed'>X</dd>
 		</dl>
-		<script src='../libs/jquery.min.js'></script>
+		<script src='../../libs/jquery.min.js'></script>
 		<script>
 		if(navigator.geolocation) {
 			navigator.geolocation.watchPosition(
@@ -34,11 +34,10 @@
 				},
 				function (err) {
 					$('#status').text("Error: " + err.message);
-				}
-			)
+				});
 		}
 		else {
-			$('#status').text("Geolocation is not available here.")
+			$('#status').text("Geolocation is not available here.");
 		}
 		</script>
 	</body>

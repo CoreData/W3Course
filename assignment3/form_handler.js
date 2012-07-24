@@ -2,21 +2,38 @@
 
 $(document).ready(function() {
 	$("#entry_button").bind("click", function handleSubmitButton(event) {
-		var headline = $("#entry_list input[name=entry_headline]").val();
-		var body = $("#entry_list textarea[name=entry_body]").val();
 		
-		var entry = "<article>" + 
-					"<h2>" + headline + 
-					"<\/h2>" + 
-					"<p>" + body + "<\/p>" + 
-					"<a href=\"\#\" class=\"deleter\">Delete this entry<\/a>" +
-					"<\/article>";
+		// This belongs to the model
+		var myEntry = {
+			headline: "",
+			body: "",
+			time: 0,
+			address: ""
+		};
 		
-		////
-		// 	DEBUG
-		////
-		alert(entry);
-		
-		$(".entries").prepend(entry);
-	});	
+		myEntry.headline = $("#entry_list input[name=entry_headline]").val();
+		myEntry.body = $("#entry_list textarea[name=entry_body]").val();
+		myEntry.time = Date.parse(new Date());
+		myEntry.address = stash.get('address');
+
+		writeEntry(myEntry);
+		stash.set(myEntry.time.toString(), JSON.stringify(myEntry));
+		stash.add('Identifiers', ' ' + myEntry.time.toString());
+		console.log(stash.get('Identifiers'));
+	});
 });
+
+function writeEntry(thisEntry) {
+	
+	// This is view code
+	var entry = "<article>" + 
+				"<h2>" + thisEntry.headline + 
+				"<\/h2>" + 
+				"<p>" + thisEntry.body + "<\/p>" + 
+				new Date(thisEntry.time) + 
+				"\t| Address: " + thisEntry.address + "\t|\t" +
+				"<a href=\"\#\" class=\"deleter\">Delete this entry<\/a>" +
+				"<\/article>";
+	
+	$(".entries").append(entry);
+}
