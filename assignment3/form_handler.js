@@ -30,8 +30,8 @@ function writeEntry(thisEntry) {
 				"<h2>" + thisEntry.headline + 
 				"<\/h2>" + 
 				"<p>" + thisEntry.body + "<\/p>" + 
-				new Date(thisEntry.time) + 
-				"\t| Address: " + thisEntry.address + "\t|\t" +
+				"<span id=\"time\">" + new Date(thisEntry.time) + "<\/span>" +
+				"\t| Address: <span id=\"address\">" + thisEntry.address + "<\/span>\t|\t" +
 				"<a href=\"\#\" class=\"deleter\">Delete this entry<\/a>" +
 				"<\/article>";
 	
