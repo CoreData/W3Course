@@ -40,7 +40,6 @@ function initStorage() {
 	if(!stash.get('Identifiers')) {
 		initDate = Date.parse(new Date());
 		firstEntry = '{"headline":"Wrote my first mobile application", "body":"Today I wrote my first mobile application. It was great! I had huge amounts of fun, it was a lot easier than I expected, and I was so happy I spent the rest of the day celebrating.","time":' + initDate + ',"address":"' + stash.get('address') + '"}';
-		alert(firstEntry);
 		stash.set(initDate.toString(), firstEntry);
 		stash.set('Identifiers', initDate.toString() + " ");
 		
