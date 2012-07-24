@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en' manifest='diary.appcache'>
+  <head>
+    <meta charset='utf-8'/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="stylesheet" href="master.css" />
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <title>Assignment 4</title>
+  </head>
+  <body>
+	  <div id="header">
+		  <h1>My Diary Entries</h1>
+	  </div>
+	<section class='entry'>
+		<article>
+			<h2>Submit a new entry here</h2>
+			<ul id="entry_list">
+				<li><label for="entry_headline_label">Headline</label></li>
+				<li><input id="entry_headline" name="entry_headline" type="text" placeholder="Your entry headline goes here..." required autofocus /></li>
+				<li><label for="entry_body_label">Body</label></li>
+				<li><textarea id="entry_body" name="entry_body" rows="5" placeholder="Your entry text goes here..." required></textarea></li>
+				<li><button id="entry_button" type="submit">Submit your entry</button></li>
+			</ul>
+		</article>
+	</section>
+    <section class='entries'>
+		<!-- Content gets loaded here, please do not enter manually. -->
+    </section>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src='../libs/jquery.min.js'></script>
+	<script src='../libs/stash.min.js'></script>
+	<script src="app.min.js"></script>
+  </body>
+</html>

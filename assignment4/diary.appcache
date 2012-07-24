@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# Revision 1
+
+# HTML
+index.html
+
+# JAVASCRIPTS
+app.min.js
+../libs/stash.min.js
+../libs/jquery.min.js
+
+#CSS FILES
+master.css
+
+NETWORK:
+http://maps.gstatic.com/
+http://maps.google.com/
+http://maps.googleapis.com/
+http://mt0.googleapis.com/
+http://mt1.googleapis.com/
+http://mt2.googleapis.com/
+http://mt3.googleapis.com/
+http://khm0.googleapis.com/
+http://khm1.googleapis.com/
+http://cbk0.googleapis.com/
+http://cbk1.googleapis.com/
+http://www.google-analytics.com/
+http://gg.google.com/
+http://csi.gstatic.com/
